@@ -15,7 +15,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
-REDIRECT_URI = "http://127.0.0.1:5000/google/callback"  # Changed to 127.0.0.1 to match VS Code
+REDIRECT_URI = os.getenv("REDIRECT_URI")  # Must match exactly
 
 def create_google_flow():
     return Flow.from_client_config(

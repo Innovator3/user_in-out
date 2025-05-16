@@ -1,0 +1,367 @@
+/* ===== Modern Login Form CSS ===== */
+
+/* Replace title styles with these */
+.title-icon {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.login-gif {
+    width: 90px; /* Adjust based on your GIF size */
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.login-gif:hover {
+    transform: scale(1.1); /* Optional hover effect */
+}
+
+
+/* Particles Background (unchanged) */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #ffffff;
+    pointer-events: all;
+}
+
+/* Main Container */
+.login-container {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    padding: 20px;
+}
+
+/* Card Style Form */
+.form-wrapper {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 48px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 
+        0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    pointer-events: auto;
+    transform: translateZ(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.form-wrapper:hover {
+    transform: translateZ(20px) scale(1.01);
+    box-shadow: 
+        0 20px 25px -5px rgba(0, 0, 0, 0.15),
+        0 10px 10px -5px rgba(0, 0, 0, 0.06);
+}
+
+/* Typography */
+.title {
+    font-size: 2.25rem;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.caption {
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: bold;
+    text-align: center;
+    color: #04215b;
+    margin-bottom: 32px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Modern Input Fields */
+.form-floating {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-floating .form-control {
+    height: 60px;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+}
+
+.form-floating .form-control:focus {
+    border-color: #7F00FF;
+    box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.1);
+    background: white;
+}
+
+.form-floating label {
+    padding: 1rem 1.5rem;
+    color: #666;
+    transition: all 0.3s ease;
+}
+/* Password Toggle */
+.password-show-toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    color: #7F00FF;
+    transition: all 0.2s ease;
+}
+
+.password-show-toggle:hover {
+    color: #5B00BD;
+}
+
+/* Checkbox */
+.form-check {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #D1D5DB;
+}
+
+.form-check-input:checked {
+    background-color: #7F00FF;
+    border-color: #7F00FF;
+}
+
+.form-check-label {
+    color: #4B5563;
+    font-size: 0.875rem;
+}
+
+/* Primary Button */
+.btn-primary {
+    border-radius: 12px;
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+    border: none;
+    height: 60px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(127, 0, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(127, 0, 255, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Links */
+.forgot-password {
+    color: #7F00FF;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: #5B00BD;
+    text-decoration: underline;
+}
+
+/* Signup Specific Styles */
+.signup-link {
+    color: #7F00FF;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.signup-link:hover {
+    color: #5B00BD;
+    text-decoration: underline;
+}
+
+/* Terms Checkbox Adjustment */
+.form-check-label a {
+    color: #7F00FF;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.form-check-label a:hover {
+    color: #5B00BD;
+    text-decoration: underline;
+}
+
+/* Social Login Section - Corrected */
+.social-account-wrap {
+    padding-top: 24px;
+    margin-top: 32px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-account-wrap h4 {
+    font-size: 0.875rem;
+    color: #6B7280;
+    text-align: center;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.social-account {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 16px; /* Better spacing between icons */
+}
+
+.social-account li {
+    list-style: none;
+}
+
+.social-account li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    background: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-account li a:hover {
+    border-color: #7F00FF;
+    background: rgba(127, 0, 255, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(127, 0, 255, 0.1);
+}
+
+.social-account li a img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.social-account li a:hover img {
+    transform: scale(1.1);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 32px;
+        border-radius: 20px;
+    }
+    
+    .title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-wrapper {
+        padding: 24px;
+        margin: 16px;
+    }
+    
+    .btn-primary {
+        height: 52px;
+    }
+    
+    .form-floating .form-control {
+        height: 56px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-wrapper {
+    animation: fadeIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+/* Compact Form Styles */
+.compact-form .form-wrapper {
+    padding: 30px;
+    max-width: 400px;
+}
+
+.compact-form .form-floating {
+    margin-bottom: 12px;
+}
+
+.compact-form .form-control {
+    height: 48px !important;
+    font-size: 0.9rem;
+}
+
+.compact-form .btn {
+    padding: 0.5rem 1rem;
+    height: 42px;
+}
+
+.compact-form .login-gif {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.compact-form .caption {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.compact-form .divider-text {
+    font-size: 0.8rem;
+}
+
+.compact-form .divider-text span {
+    padding: 0 10px;
+}
+
+.compact-form .social-icon {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.compact-form .social-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
